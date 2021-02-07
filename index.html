@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <!-- javascript -->
-  <script src="script.js"></script>
   <title>Cooking Master</title>
 </head>
 
@@ -35,15 +33,26 @@
     </nav>
   </header>
 
-  <!-- search bar -->
-  <section class="container mt-5">
-    <div class="input-group w">
-      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-        aria-describedby="search-addon" />
-      <button id="search-btn" type="button" class="btn btn-primary">Search</button>
+
+
+  <!-- Search Result Area -->
+  <main class="content-area">
+    <div class="search-bar col-md-6 mx-auto">
+        <div class="input-group search-box my-5">
+            <input id="search-field" type="text" class="form-control rounded" placeholder="Enter your food name">
+            <button onclick="searchMeals()" class="btn btn-success search-btn">Search</button>
+        </div>
     </div>
-  </section>
-  
+    <!-- Single Food -->
+    <h3 id="error-message" class="text-danger"></h3>
+        
+    </div>
+    <div id="meal-container">
+    </div>
+</main>
+
+
+<script src="script.js"></script>
 </body>
 
 </html>
