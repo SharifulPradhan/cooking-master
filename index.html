@@ -7,15 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <!-- bootstrap styles -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <title>Cooking Master</title>
 </head>
 
-<body>
+<body class="full-body">
+
   <!-- navbar -->
   <header class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Cooking Master</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -33,26 +36,44 @@
     </nav>
   </header>
 
-
-
-  <!-- Search Result Area -->
+  <!-- Search Bar -->
   <main class="content-area">
     <div class="search-bar col-md-6 mx-auto">
-        <div class="input-group search-box my-5">
-            <input id="search-field" type="text" class="form-control rounded" placeholder="Enter your food name">
-            <button onclick="searchMeals()" class="btn btn-success search-btn">Search</button>
-        </div>
+      <div class="input-group search-box my-5">
+        <input id="search-field" type="text" class="form-control rounded" placeholder="Enter your meal name">
+        <button onclick="searchMeals()" class="btn btn-success search-btn">Search</button>
+      </div>
     </div>
-    <!-- Single Food -->
-    <h3 id="error-message" class="text-danger"></h3>
-        
-    </div>
-    <div id="meal-container">
-    </div>
-</main>
 
+    <!-- Error Message -->
+    <div class="container">
+      <h1 id="error-text" class="text-center text-danger"></h1>
+    </div>
 
-<script src="script.js"></script>
+    <!-- Single meal info -->
+    <div id="meal-info" class="container">
+    </div>
+
+    <!-- Meals Display -->
+    <div class="container">
+      <div id="display-meals" class="row">
+      </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+      </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+      </script>
+  </main>
 </body>
 
 </html>

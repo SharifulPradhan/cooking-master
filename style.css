@@ -1,3 +1,8 @@
-body {
-  background-color: bisque;
+.full-body {
+  background-color: #EDD263;
+}
+
+.meal-card {
+  margin: auto;
+  width: 30rem;
 }
